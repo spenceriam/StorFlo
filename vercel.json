@@ -20,11 +20,11 @@
     },
     {
       "src": "/(.*\\.(js|json|css|ico|png|jpg|jpeg|svg|gif))",
-      "dest": "/client/build/$1"
+      "dest": "/client/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/client/build/index.html"
+      "dest": "/client/index.html"
     }
   ]
 }
