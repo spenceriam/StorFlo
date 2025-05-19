@@ -16,7 +16,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server/server.js"
+      "dest": "server/server.js"
     },
     {
       "src": "/(.*\\.(js|json|css|ico|png|jpg|jpeg|svg|gif))",
@@ -26,5 +26,9 @@
       "src": "/(.*)",
       "dest": "/client/index.html"
     }
-  ]
+  ],
+  "env": {
+    "GIBSON_API_KEY": "@gibson_api_key",
+    "GIBSON_API_URL": "@gibson_api_url"
+  }
 }
