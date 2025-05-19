@@ -9,22 +9,24 @@
       "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build"
+        "distDir": "build",
+        "buildCommand": "npm run build"
       }
     }
   ],
+  "outputDirectory": "client/build",
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "server/server.js"
+      "dest": "/server/server.js"
     },
     {
       "src": "/(.*\\.(js|json|css|ico|png|jpg|jpeg|svg|gif))",
-      "dest": "client/build/$1"
+      "dest": "/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "client/build/index.html"
+      "dest": "/index.html"
     }
   ]
 }
